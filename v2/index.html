@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>NewProject</title>
+    <link rel="stylesheet" type="text/css" href="css/calculatornew.css">
+    <script src="/js/calculyator.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="newcalculator">
+        <div class="title1">
+            <h2><strong>Калькулятор стоимости заказа</strong></h2>
+        </div>
+
+        <div class="parametrs">
+            <h4>Материал:</h4>
+            <select class="select_parametrs" id="materials_choice" name="materials_choice">
+                    <option value="ng">Нержавеющая сталь</option>
+                    <option value="ch">Черный металл</option>
+                    <option value="md">Медь</option>
+                    <option value="lt">Латунь</option>
+                    <option value="al">Алюминий</option>
+                    <option value="ti">Титан</option>
+                </select>
+        
+                <h4>Толщина: </h4>
+            <select class="select_parametrs" id="thickness_choice" name="thickness_choice">
+                    <option value="1">1mm</option>
+                    <option value="2">2mm</option>
+                    <option value="3">3mm</option>
+                    <option value="4">4mm</option>
+                    <option value="5">5mm</option>
+                    <option value="6">6mm</option>
+                    <option value="8">8mm</option>
+                    <option value="10">10mm</option>
+                    <option value="12">12mm</option>
+                    <option value="14">14mm</option>
+                    <option value="16">16mm</option>
+                    <option value="18">18mm</option>
+                    <option value="20">20mm</option>
+                </select>
+        
+                <h4>Качество:</h4>
+            <select class="select_parametrs" id="quality_choice" name="quality_choice" onchange="imgchange(value)">
+                    <option value="rz60">Стандарт (60-40RZ)</option>
+                    <option value="rz80">Грубое (100-80RZ)</option>
+                    <option value="rz20">Наилучшее (40-10RZ)</option>
+                </select>
+                
+                <h5 class="select_parametrs" id="qtext">Стандартное качество - подходит для 90% задачь, точность до 0,4-0,2мм</h5>
+                
+        </div>
+
+        <div class="qaliti">
+            <img class="qaliti" id="imgq" src="./jpg/2.jpg">
+        </div>
+        
+        <div class="clbutom">
+            <h4>Количество м.п.:</h4>
+            <input class="select_parametrs" id="length_choice" type="text" name="length_choice" value="1" onchange="myCalculyator()" />
+        
+            <button id="bt_calc" onclick="myCalculyator()" type="button">Просчет</button>
+            
+            <h4 style="margin-top: 15px;margin-bottom:15px; color: rgb(80, 245, 146);" id="res_sp"></h4>
+            <h4 style="margin-top: 15px;margin-bottom:15px; color: rgb(245, 174, 174);" id="calcMess"></h4>
+            <h5 style="text-align: center;">*просчитанная стоимость может отличатся от реальной. Для точного просчета обратитесь к менеджерам компании 
+            </h5>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
