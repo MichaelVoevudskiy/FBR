@@ -8,12 +8,10 @@ function myCalculyator(){
     xhr.responseType = 'json';
     xhr.send();
     
-    // тело ответа {"сообщение": "Привет, мир!"}
+    // тело ответа 
     xhr.onload = function() {
-     let mater = xhr.response;
-      // console.log(mater); // Привет, мир!
-      // mater = JSON.parse(responseObj);
-       clac(mater);
+        let mater = xhr.response;
+        clac(mater);
     };
 };
 
